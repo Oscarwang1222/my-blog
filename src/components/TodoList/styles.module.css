@@ -1,0 +1,335 @@
+.todoContainer {
+  background: var(--ifm-background-surface-color);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  padding: 24px;
+  margin-top: 40px;
+  position: relative;
+}
+
+[data-theme='dark'] .todoContainer {
+  border-color: rgba(255, 255, 255, 0.05);
+}
+
+.todoHeader {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 2;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.todoHeader h3 {
+  margin: 0;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.todoAddBtn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: var(--color-blue);
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.todoAddBtn:hover {
+  background: #2563eb;
+  transform: scale(1.05);
+}
+
+.runningCard {
+  position: relative;
+  background: var(--ifm-background-surface-color);
+  border: none !important;
+  animation: slideIn 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.progressBorder {
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  pointer-events: none;
+  z-index: 1;
+  overflow: visible;
+}
+
+.progressRect {
+  filter: drop-shadow(0 0 3px var(--color-blue));
+}
+
+.shiftingItem {
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.todoForm {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
+  padding: 16px;
+  background: rgba(59, 130, 246, 0.05);
+  border-radius: 8px;
+  position: relative;
+  z-index: 2;
+}
+
+[data-theme='dark'] .todoForm {
+  background: rgba(96, 165, 250, 0.1);
+}
+
+.todoInput {
+  flex: 1;
+  min-width: 200px;
+  padding: 10px 14px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  font-size: 14px;
+  background: var(--ifm-background-surface-color);
+  color: var(--ifm-font-color-base);
+  transition: border-color 0.2s ease;
+}
+
+[data-theme='dark'] .todoInput {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.todoInput:focus {
+  outline: none;
+  border-color: var(--color-blue);
+}
+
+.todoTimeInputs {
+  display: flex;
+  gap: 8px;
+  flex: 0 0 auto;
+}
+
+.todoInputTime {
+  width: 80px;
+  min-width: 60px;
+  flex: none;
+  text-align: center;
+}
+
+.todoFormBtns {
+  display: flex;
+  gap: 8px;
+}
+
+.todoList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+  z-index: 2;
+}
+
+.todoItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  background: var(--ifm-background-color);
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+}
+
+[data-theme='dark'] .todoItem {
+  border-color: rgba(255, 255, 255, 0.05);
+}
+
+.todoItem:hover {
+  background: rgba(0, 0, 0, 0.02);
+}
+
+[data-theme='dark'] .todoItem:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.todoItemContent {
+  flex: 1;
+  min-width: 0;
+}
+
+.todoItemText {
+  display: block;
+  font-weight: 500;
+  word-break: break-word;
+}
+
+.todoEstimated {
+  display: block;
+  font-size: 12px;
+  color: var(--ifm-color-content-secondary);
+  margin-top: 4px;
+}
+
+.todoTimer {
+  font-family: 'SF Mono', 'Monaco', 'Consolas', monospace;
+  font-size: 18px;
+  font-weight: 600;
+  min-width: 80px;
+  text-align: center;
+}
+
+.todoActions {
+  display: flex;
+  gap: 8px;
+  position: relative;
+  z-index: 3;
+}
+
+.todoActionBtn {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  transition: all 0.2s ease;
+}
+
+.todoActionBtnStart {
+  background: rgba(16, 185, 129, 0.1);
+  color: var(--color-green);
+}
+
+.todoActionBtnStart:hover {
+  background: var(--color-green);
+  color: white;
+}
+
+.todoActionBtnPause {
+  background: rgba(245, 158, 11, 0.1);
+  color: var(--color-orange);
+}
+
+.todoActionBtnPause:hover {
+  background: var(--color-orange);
+  color: white;
+}
+
+.todoActionBtnComplete {
+  background: rgba(59, 130, 246, 0.1);
+  color: var(--color-blue);
+}
+
+.todoActionBtnComplete:hover {
+  background: var(--color-blue);
+  color: white;
+}
+
+.todoActionBtnDelete {
+  background: rgba(239, 68, 68, 0.1);
+  color: var(--color-red);
+}
+
+.todoActionBtnDelete:hover {
+  background: var(--color-red);
+  color: white;
+}
+
+.todoItemCompleted {
+  opacity: 0.7;
+}
+
+.todoItemCompleted .todoItemText {
+  text-decoration: line-through;
+  color: var(--ifm-color-content-secondary);
+}
+
+.todoCompletedInfo {
+  display: flex;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--ifm-color-content-secondary);
+  margin-top: 4px;
+}
+
+.todoEmpty {
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--ifm-color-content-secondary);
+}
+
+.todoFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  font-size: 14px;
+  position: relative;
+  z-index: 2;
+}
+
+[data-theme='dark'] .todoFooter {
+  border-top-color: rgba(255, 255, 255, 0.05);
+}
+
+.todoRemainingTime {
+  font-family: 'SF Mono', 'Monaco', 'Consolas', monospace;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--color-purple);
+}
+
+@media screen and (max-width: 768px) {
+  .todoHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .runningCard {
+    width: 100%;
+    max-width: none;
+  }
+  
+  .todoItem {
+    flex-wrap: wrap;
+  }
+  
+  .todoTimer {
+    order: -1;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 8px;
+  }
+  
+  .todoActions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}

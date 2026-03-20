@@ -1,0 +1,24 @@
+随笔:
+  label: 随笔
+  permalink: /suibi
+  description: 生活随笔
+
+博客:
+  label: 博客
+  permalink: /blog-tag
+  description: 博客相关
+
+日记:
+  label: 日记
+  permalink: /diary-tag
+  description: 日常记录
+
+编程:
+  label: 编程
+  permalink: /programming-tag
+  description: 编程相关
+
+AI:
+  label: AI
+  permalink: /ai-tag
+  description: 人工智能相关

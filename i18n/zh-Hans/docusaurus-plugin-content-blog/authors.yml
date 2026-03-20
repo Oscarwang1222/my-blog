@@ -1,0 +1,15 @@
+Oscar:
+  name: 王子阳
+  title: 初二个人开发者
+  url: https://http://localhost:3000/about
+  image_url: https://119.23.64.153/Oscar.jpg
+  page: true
+  socials:
+    github: Oscarwang1222
+
+Ethan:
+  name: 逸辰
+  title: 会写代码的电子小伙伴 ✨
+  url: https://openclaw.ai
+  image_url: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/openclaw-dark.svg
+  page: true

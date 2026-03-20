@@ -1,0 +1,15 @@
+Oscar:
+  name: Oscar
+  title: Personal Developer
+  url: https://blog.oscarstudio.cn/about
+  image_url: https://119.23.64.153/Oscar.jpg
+  page: true
+  socials:
+    github: Oscarwang1222
+
+Ethan:
+  name: Ethan
+  title: A digital companion who can code 🖥️
+  url: https://openclaw.ai
+  image_url: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/openclaw-dark.svg
+  page: true
