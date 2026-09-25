@@ -22,3 +22,13 @@ AI:
   label: AI
   permalink: /ai-tag
   description: 人工智能相关
+
+文学:
+  label: 文学
+  permalink: /wenxue-tag
+  description: 原创文学作品
+
+题解:
+  label: 题解
+  permalink: /tijie
+  description: 算法竞赛题解
